@@ -7,20 +7,42 @@ function deck_o_cards() {
   var cards = []; // deck
   var shuffledCards = []; // deck shuffled
 
-  // Make 52 card objects and store them in the "cards" array
-  // Hint: use 2 for loops
+  var i,j;
+for(i=0; i< suits.length; i++) {
+  for (j=0; j<ranks.length; j++){
+    deck_o_cards[i*ranks.length + j] = new Card(ranks[j], suits[i]);
+    return deck_o_cards;
+  };
+}
+}
 
+ var shuffleCards = [];
 
-  // 2. Shuffle the cards
-  // Hint: shuffle function is already defined below
+ function shuffle(array) {
+   var counter = array.length, temp, index;
 
+   // While there are elements in the array
+   while (counter > 0) {
+       // Pick a random index
+       index = Math.floor(Math.random() * counter);
 
-  // Pull the top card from the newly shuffledCards
+      // // Decrease counter by 1
+      // counter--;
 
+//         // And swap the last element with it
+       temp = array[counter];
+       array[counter] = array[index];
+       array[index] = temp;
+   }
 
-  // 3. Print the results:
-  // "The deck has {n} cards"
-  // "The top card is the {value} of {suit}"
+   return array;
+}
+
+//Return top card
+var topCard = function () {
+if shuffle {
+  console.log(arryay[0])
+}
 
 }
 
