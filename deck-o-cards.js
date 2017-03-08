@@ -9,21 +9,51 @@ function deck_o_cards() {
 
   // Make 52 card objects and store them in the "cards" array
   // Hint: use 2 for loops
+  for (var i = 0; i < suits.length; i++) {
 
+    // console.log(suits[i]); - this will show the suits
+
+
+    for (var j = 0; j < values.length; j++) {
+      card = {
+        suit: suits[i],
+        value: values[j]
+      };
+
+      // console.log(card); - this will print the deck of cards
+
+      cards.push(card);
+    }
+  }
 
   // 2. Shuffle the cards
   // Hint: shuffle function is already defined below
+  shuffledCards = shuffle(cards);
 
 
-  // Pull the top card from the newly shuffledCards
+// Pull the top card from the newly shuffledCards
+topCard = shuffledCards[0];
+
+// get 5 cards from shuffled deck
+pokerHand = shuffledCards.slice(0,5);
+
+// console.log(pokerHand);
 
 
-  // 3. Print the results:
+// console.log(topCard);
+
+// 3. Print the results:
   // "The deck has {n} cards"
   // "The top card is the {value} of {suit}"
-
-}
-
+console.log('The deck has ' + cards.length + ' cards');
+console.log('The top card is the ' + topCard.value + ' of ' + topCard.suit);
+console.log('Here is your poker hand: ' + '\n' +
+pokerHand[0].value + ' of ' + pokerHand[0].suit + '\n' +
+pokerHand[1].value + ' of ' + pokerHand[1].suit + '\n' +
+pokerHand[2].value + ' of ' + pokerHand[2].suit + '\n' +
+pokerHand[3].value + ' of ' + pokerHand[3].suit + '\n' +
+pokerHand[4].value + ' of ' + pokerHand[4].suit + '\n'
+);
 
 
 // Fisher-Yates Shuffle
@@ -47,3 +77,7 @@ function shuffle(array) {
 
     return array;
 }
+
+}
+
+deck_o_cards();
