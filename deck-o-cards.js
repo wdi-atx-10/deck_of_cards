@@ -4,12 +4,28 @@ function deck_o_cards() {
   var values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King', 'Ace'];
   var suits = ['hearts', 'diamonds', 'clubs', 'spades'];
 
-  var cards = []; // deck
+  var cards = []// deck
   var shuffledCards = []; // deck shuffled
 
   // Make 52 card objects and store them in the "cards" array
   // Hint: use 2 for loops
+  for (var i=0, x=values.length; i<x; i++){
+     for (var j=0, k=suits.length; j<k; j++){
+        var deck = {};
 
+  deck.values=values[i];
+  deck.suits=suits[j];
+  cards.push(deck);
+   }
+
+
+   };
+
+   console.log(cards);
+
+
+   console.log(shuffledCards.deck_o_cards);
+ }
 
   // 2. Shuffle the cards
   // Hint: shuffle function is already defined below
