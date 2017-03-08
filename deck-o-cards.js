@@ -12,26 +12,32 @@ function deck_o_cards() {
 
   for (var i=0; i<suits.length; i++) {
     for (var j=0; j<values.length; j++) {
-		var deck = cards.push(suits[i], values[j]);    //can't figure out how to store both array values as one objects
+		  card = {
+		    suit: suits[i],
+		    value: values[j],
+		  };
+		  cards.push(card);
     }
   }
-  // console.log(cards);
+  // console.log(cards);    // test
 
   // 2. Shuffle the cards
   // Hint: shuffle function is already defined below
 
-  shuffle(cards);
+  shuffledCards = shuffle(cards);
+  // console.log(cards);    // test
 
   // Pull the top card from the newly shuffledCards
 
-  console.log(cards[0]);
+  topCard = shuffledCards[0];
+  // console.log(topCard);     // test
 
   // 3. Print the results:
   // "The deck has {n} cards"
   // "The top card is the {value} of {suit}"
 
-  console.log("The deck has " + deck + " cards.");
-  console.log("The top card is the " + cards[0].values + " of " + cards[0].suits);
+  console.log("The deck has " + cards.length + " cards.");
+  console.log("The top card is the " + topCard.value + " of " + topCard.suit);
 }
 
 deck_o_cards();
