@@ -54,3 +54,5 @@
          array[index] = temp;
      }
   }
+
+  deck_o_cards();
