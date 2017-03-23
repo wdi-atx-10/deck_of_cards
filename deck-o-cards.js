@@ -6,7 +6,29 @@ function deck_o_cards() {
 
   var cards = []; // deck
   var shuffledCards = []; // deck shuffled
+  // Make 52 card objects and store them in the "cards" array
+  // Hint: use 2 for loops
 
+  for (var i=0; i < suits.length; i++);
+  for (var j=0; j < values.length; j++);
+
+  card ={
+    suit: suits[i],
+    values: values[j],
+  };
+
+  cards.push(card);
+
+   }
+  }
+
+  shuffledCards= shuffle(cards);
+  topCard = shuffledCards[0];
+
+  console.log("the deck has" + cards.length + "cards");
+  }
+
+  deck_o_cards();
   // Make 52 card objects and store them in the "cards" array
   // Hint: use 2 for loops
 
